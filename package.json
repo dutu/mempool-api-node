@@ -1,0 +1,44 @@
+{
+  "name": "mempool-api-node",
+  "version": "0.1.0",
+  "description": "A minimal Node.js client for the Mempool HTTP API",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dutu/mempool-api-node.git"
+  },
+  "author": "dutu",
+  "keywords": [
+    "mempool",
+    "electrs",
+    "bitcoin",
+    "http",
+    "api"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "default": "./src/index.js"
+    }
+  },
+  "files": [
+    "src",
+    "docs"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test \"test/*.test.js\" && tsc -p test/types/tsconfig.json && tsc -p test/types/tsconfig.json --module ESNext --moduleResolution Bundler",
+    "test:types": "tsc -p test/types/tsconfig.json && tsc -p test/types/tsconfig.json --module ESNext --moduleResolution Bundler"
+  },
+  "packageManager": "yarn@4.18.0",
+  "devDependencies": {
+    "@types/node": "^22",
+    "typescript": "^5.9.3"
+  }
+}
