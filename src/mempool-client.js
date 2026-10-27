@@ -343,6 +343,15 @@ export class MempoolClient {
   }
 
   /**
+   * Historical block fee rates with up to three decimal places.
+   * @param {string} timePeriod Forwarded to the server
+   * @returns {Promise<unknown[]>} Historical block fee rates with up to three decimal places
+   */
+  async getBlockFeeRatesPrecise(timePeriod) {
+    return this.#request(`/v1/mining/blocks/fee-rates/${encodeSegment(timePeriod, 'timePeriod')}/precise`)
+  }
+
+  /**
    * Historical block sizes and weights.
    * @param {string} timePeriod Forwarded to the server
    * @returns {Promise<unknown>} Historical block sizes and weights

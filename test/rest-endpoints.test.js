@@ -45,6 +45,7 @@ const endpoints = [
   ['getBlockFees', ['1w'], '/v1/mining/blocks/fees/1w', 'array'],
   ['getBlockRewards', ['1w'], '/v1/mining/blocks/rewards/1w', 'array'],
   ['getBlockFeeRates', ['1w'], '/v1/mining/blocks/fee-rates/1w', 'array'],
+  ['getBlockFeeRatesPrecise', ['1w'], '/v1/mining/blocks/fee-rates/1w/precise', 'array'],
   ['getBlockSizesWeights', ['1w'], '/v1/mining/blocks/sizes-weights/1w'],
   ['getBlockPredictions', ['1w'], '/v1/mining/blocks/predictions/1w', 'array'],
   ['getBlockAuditScore', ['hash'], '/v1/mining/blocks/audit/score/hash'],
@@ -134,7 +135,7 @@ test('new string arguments reject invalid values before a request', async (conte
     'getMiningPool', 'getMiningPoolHashrate', 'getMiningPoolBlocks', 'getBlockAuditScore',
     'getBlockAuditSummary', 'getTransactionCpfp', 'getTransactionMerkleblockProof',
     'getTransactionMerkleProof', 'getTransactionRaw', 'getTransactionRbfTimeline',
-    'getBlockFees', 'getBlockRewards', 'getBlockFeeRates', 'getBlockSizesWeights', 'getBlockPredictions'
+    'getBlockFees', 'getBlockRewards', 'getBlockFeeRates', 'getBlockFeeRatesPrecise', 'getBlockSizesWeights', 'getBlockPredictions'
   ]
   for (const method of methods) {
     for (const value of [undefined, null, '', ' ', 1, [], '.', '..', '\ud800']) {

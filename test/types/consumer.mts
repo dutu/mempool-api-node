@@ -91,6 +91,7 @@ const expandedArray: Promise<unknown[]>[] = [
   client.getBlockFees('value'),
   client.getBlockRewards('value'),
   client.getBlockFeeRates('value'),
+  client.getBlockFeeRatesPrecise('value'),
   client.getBlockPredictions('value'),
   client.getBlocksAuditScores(0),
   client.getMempoolBlocksFees(),

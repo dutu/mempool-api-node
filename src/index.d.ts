@@ -61,6 +61,7 @@ export class MempoolClient {
   getBlockFees<Item = unknown>(timePeriod: string): Promise<Item[]>
   getBlockRewards<Item = unknown>(timePeriod: string): Promise<Item[]>
   getBlockFeeRates<Item = unknown>(timePeriod: string): Promise<Item[]>
+  getBlockFeeRatesPrecise<Item = unknown>(timePeriod: string): Promise<Item[]>
   getBlockSizesWeights<Result = unknown>(timePeriod: string): Promise<Result>
   getBlockPredictions<Item = unknown>(timePeriod: string): Promise<Item[]>
   getBlockAuditScore<Result = unknown>(hash: string): Promise<Result>

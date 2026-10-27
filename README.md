@@ -152,6 +152,7 @@ All methods return promises. JSON responses are parsed without schema validation
 | `getBlockFees(timePeriod)` | [GET Block Fees](https://mempool.space/docs/api/rest#get-block-fees) | JSON array |
 | `getBlockRewards(timePeriod)` | [GET Block Rewards](https://mempool.space/docs/api/rest#get-block-rewards) | JSON array |
 | `getBlockFeeRates(timePeriod)` | [GET Block Feerates](https://mempool.space/docs/api/rest#get-block-feerates) | JSON array |
+| `getBlockFeeRatesPrecise(timePeriod)` | [GET Block Feerates (Precise)](https://mempool.space/docs/api/rest#get-block-feerates-precise) | JSON array |
 | `getBlockSizesWeights(timePeriod)` | [GET Block Sizes and Weights](https://mempool.space/docs/api/rest#get-sizes-weights) | JSON |
 | `getBlockPredictions(timePeriod)` | [GET Block Predictions](https://mempool.space/docs/api/rest#get-block-predictions) | JSON array |
 | `getBlockAuditScore(hash)` | [GET Block Audit Score](https://mempool.space/docs/api/rest#get-block-audit-score) | JSON |
